@@ -38,8 +38,8 @@ return new \Commune\DingTalk\DingTalkPlatformConfig([
         HfHttpConfig::class => [
             'server' => [
                 'name' => 'dingtalk',
-                'host' => '127.0.0.1',
-                'port' => 9510,
+                'host' => env('DING_TALK_HOST', '127.0.0.1'),
+                'port' => env('DING_TALK_PORT', 9830),
             ],
             'processes' => [],
             'routes' => [],
