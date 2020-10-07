@@ -15,7 +15,7 @@
         "php": ">=7.3",
         "ext-swoole": ">=4.5",
         "commune/chatbot-hyperf": "dev-master",
-        "commune/platform-wechat": "dev-master",
+        "commune/component-dingtalk": "dev-master",
         "hyperf/cache": "~2.0.0",
         "hyperf/command": "~2.0.0",
         "hyperf/config": "~2.0.0",
@@ -72,15 +72,5 @@
         "analyse": "phpstan analyse --memory-limit 300M -l 0 -c phpstan.neon ./app ./config",
         "start": "php ./bin/hyperf.php start",
         "init-proxy": "init-proxy.sh"
-    },
-    "repositories" : [
-        {
-            "type": "path",
-            "url": "../chatbot"
-        },
-        {
-            "type": "path",
-            "url": "../chatbot-hyperf"
-        }
-    ]
+    }
 }
