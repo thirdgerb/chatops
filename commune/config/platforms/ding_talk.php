@@ -20,16 +20,21 @@ return new \Commune\DingTalk\DingTalkPlatformConfig([
 
             /**
              * 钉钉群组的对话机器人配置
-             * @see \Commune\DingTalk\Configs\GroupBotConfig
              */
             'groupBots' => [
+                /**
+                 * 钉钉机器人的配置.
+                 * @see \Commune\DingTalk\Configs\GroupBotConfig
+                 */
                 [
                     'id' => 'default',
                     'url' => '/ding-talk/bots/defaults',
-                    'botName' => '钉钉测试机器人',
+                    'botName' => 'Commune 助手',
                     'appKey' => env('DING_TALK_BOT_KEY', ''),
                     'appSecret' => env('DING_TALK_BOT_SECRET', ''),
+
                     'entry' => DingTalkHome::genUcl()->encode(),
+                    'privateEntry' => 'chatops.markdown.home',
                 ],
             ]
         ]

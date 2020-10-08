@@ -88,21 +88,7 @@ return new \Commune\Host\IHostConfig([
     ],
 
     'components' => [
-        // markdown 文库
-        Components\Markdown\MarkdownComponent::class => [
-            'groups' => [
-                [
-                    'groupName' => 'chatops',
-                    'resourceDir' => StringUtils::gluePath(
-                        CommuneEnv::getResourcePath(),
-                        'markdown'
-                    ),
-                    // 命名空间 + 文件的相对路径 = document id
-                    'namespace' => 'chatops.markdown',
-                ],
-            ],
 
-        ],
     ],
 
 

@@ -26,11 +26,18 @@ return new Hyperf\Config\HfGhostConfig([
     'components' => [
         // markdown 文库
         Components\Markdown\MarkdownComponent::class => [
-
-            'reset' => CommuneEnv::isResetRegistry(),
             'groups' => [
-                Components\Markdown\Options\MDGroupOption::defaultOption(),
+                [
+                    'groupName' => 'chatops',
+                    'resourceDir' => StringUtils::gluePath(
+                        CommuneEnv::getResourcePath(),
+                        'markdown'
+                    ),
+                    // 命名空间 + 文件的相对路径 = document id
+                    'namespace' => 'chatops.markdown',
+                ],
             ],
+
         ],
 
 
